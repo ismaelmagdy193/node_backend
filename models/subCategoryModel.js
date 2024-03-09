@@ -9,13 +9,35 @@ const subCategorySchema = new mongoose.Schema({
         minlength: [2, 'Too short name!!'],
         maxlength: [32, 'Too long name !!'],
     },
-    /*title: {
-         type: String,
-         required: true,
-         trim: true,
-         minlength: [3, 'Too short product title'],
-         maxlength: [100, 'Too long product title'],
-     },*/
+    color1: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: [3, 'Too short product title'],
+        maxlength: [10, 'Too long product title'],
+    },
+
+    color2: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: [3, 'Too short product title'],
+        maxlength: [10, 'Too long product title'],
+    },
+    color3: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: [3, 'Too short product title'],
+        maxlength: [10, 'Too long product title'],
+    },
+    color4: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: [3, 'Too short product title'],
+        maxlength: [10, 'Too long product title'],
+    },
     slug: {
         type: String,
         lowercase: true,
@@ -24,10 +46,10 @@ const subCategorySchema = new mongoose.Schema({
 
     colors: [String],
 
-    imageCover: {
+    /*imageCover: {
         type: String,
         required: [true, 'SubCategory image cover required'],
-    },
+    },*/
     category: {
         type: mongoose.Schema.ObjectId,
         ref: 'Category',
