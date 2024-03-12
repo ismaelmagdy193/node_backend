@@ -18,12 +18,7 @@ exports.createSubCategoryValidator = [
         .isLength({ max: 32 })
         .withMessage('Too long name !!'),
 
-    check('availableColors')
-        .optional()
-        .isArray()
-        .withMessage('Available colors should be array of strings'),
 
-    check('imageCover').notEmpty().withMessage('Image cover required !!'),
 
     check('category')
         .notEmpty()

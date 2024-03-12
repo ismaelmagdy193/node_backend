@@ -46,10 +46,7 @@ const subCategorySchema = new mongoose.Schema({
 
     colors: [String],
 
-    /*imageCover: {
-        type: String,
-        required: [true, 'SubCategory image cover required'],
-    },*/
+
     category: {
         type: mongoose.Schema.ObjectId,
         ref: 'Category',
