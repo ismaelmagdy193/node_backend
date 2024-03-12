@@ -9,7 +9,6 @@ const globalError = require('./middlewares/errorMiddleware');
 const dbConnection = require('./config/database');
 const subCategoryRoute = require('./routes/subCategoryRout');
 const categoryRoute = require('./routes/categoryRoute');
-const brandRoute = require('./routes/brandRoute');
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
 
@@ -35,7 +34,6 @@ if (process.env.NODE_ENV === 'development') {
 // Mount Routes
 app.use('/api/vi/categories', categoryRoute);
 app.use('/api/vi/subcategories', subCategoryRoute);
-app.use('/api/vi/brands', brandRoute);
 app.use('/api/vi/users', userRoute);
 app.use('/api/vi/auth', authRoute);
 
