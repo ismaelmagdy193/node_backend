@@ -44,8 +44,6 @@ const subCategorySchema = new mongoose.Schema({
 
     },
 
-    colors: [String],
-
 
     category: {
         type: mongoose.Schema.ObjectId,
