@@ -18,8 +18,10 @@ const {
   changeUserPassword,
 } = require('../services/userService');
 
+const myClothRoute = require('./myClothRoute');
 
 const router = express.Router();
+router.use("/:userId/myclothes", myClothRoute);
 router.put('/changePassword/:id', changeUserPasswordValidator, changeUserPassword);
 
 router
